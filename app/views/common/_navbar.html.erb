@@ -11,6 +11,11 @@
               </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+              <li>
+                <%= link_to "#" do %>
+                  Shopping Cart <i class="fa fa-shopping-cart"></i> ( <%= current_cart.products.count%> )
+                <% end %>
+              </li>
               <% if !current_user %>
                  <button class="button">
                    <%= link_to('<span class="glyphicon glyphicon-log-in"></span> Login'.html_safe, new_user_session_path) %>
