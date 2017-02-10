@@ -4,4 +4,8 @@ class CartsController < ApplicationController
     redirect_to :back
     flash[:warning] = "You've clear the cart!"
   end
+
+  def checkout
+
+  end
 end
