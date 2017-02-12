@@ -22,14 +22,11 @@ products =[{title:"Asymmetrical Ruffle Shift Dress",
 	        {title:"Off the Shoulder Dress",
 	        description: "A trendy off-the-shoulder neckline and voluminous bell sleeves give this crisp crepe dress its dramatic impact.",
 	        image_path: "#{Rails.root}/app/assets/images/dress1.jpg"}
-
-          {title:"Lush Tank, BLANKNYC Jacket & Jeans",
-	        description: "A trendy off-the-shoulder neckline and voluminous bell sleeves give this crisp crepe dress its dramatic impact.",
-	        image_path: "#{Rails.root}/app/assets/images/dress1.jpg"}
-
 ]
 
 
-p1 = Product.create([title:products[0][:title],description:products[0][:description],quantity:20,price:30,image:open(products[0][:image_path])])
-p2 = Product.create([title:products[1][:title],description:products[1][:description],quantity:20,price:30,image:open(products[1][:image_path])])
-puts "create products"
+p1 = Product.create([title:products[0][:title],description:products[0][:description],quantity:200,price:300,image:open(products[0][:image_path])])
+p2 = Product.create([title:products[1][:title],description:products[1][:description],quantity:200,price:300,image:open(products[1][:image_path])])
+
+
+puts "Successfully create products info."
