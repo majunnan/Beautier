@@ -13,3 +13,23 @@ puts "Admin account created."
 
 create_account = User.create([name:'test', email: 'test@gmail.com', password:'111111', password_confirmation: '111111', is_admin: 'false'])
 puts "Test account created."
+
+
+products =[{title:"Asymmetrical Ruffle Shift Dress",
+	        description: "Cascading ruffles at just one side embolden the sleek, comfortable silhouette of this sophisticated dress.",
+	        image_path: "#{Rails.root}/app/assets/images/dress2.jpg"},
+
+	        {title:"Off the Shoulder Dress",
+	        description: "A trendy off-the-shoulder neckline and voluminous bell sleeves give this crisp crepe dress its dramatic impact.",
+	        image_path: "#{Rails.root}/app/assets/images/dress1.jpg"}
+
+          {title:"Lush Tank, BLANKNYC Jacket & Jeans",
+	        description: "A trendy off-the-shoulder neckline and voluminous bell sleeves give this crisp crepe dress its dramatic impact.",
+	        image_path: "#{Rails.root}/app/assets/images/dress1.jpg"}
+
+]
+
+
+p1 = Product.create([title:products[0][:title],description:products[0][:description],quantity:20,price:30,image:open(products[0][:image_path])])
+p2 = Product.create([title:products[1][:title],description:products[1][:description],quantity:20,price:30,image:open(products[1][:image_path])])
+puts "create products"
